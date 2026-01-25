@@ -1,18 +1,18 @@
-import { PlayIcon } from "lucide-react";
+import {  } from "lucide-react";
 import styles from './styles.module.css';
 
-export default function Button() {
+type DefaultButtonProps = {
+  icon: React.ReactNode;
+  color?:'green' | 'red';
+} & React.ComponentProps<'button'>;
+
+export function Button({icon,color='green',...props}:DefaultButtonProps) {
   return (
     <>
-      <div className={styles.play}>
-        <a className={styles.play} href='#'>
-          
-          <PlayIcon></PlayIcon>
-        
-        </a>
-        
-      </div>
+      <button className={`${styles.button} ${styles[color]}`} {...props}>
+        {icon}
+      </button>
     
-    </>
+    </>r
   )
 }

@@ -7,7 +7,13 @@ import { Container } from './components/Container';
 import { Logo } from './components/Logo';
 import { Menu } from './components/Menu';
 import { CountDown } from './components/CountDown';
-import Button from './components/Button';
+import {Button} from './components/Button';
+import {Input} from './components/Input';
+import { Cycles } from './components/Cycles';
+import { PlayCircleIcon } from 'lucide-react';
+import { Footer } from './components/Footer';
+
+
 export function App() {
   return (
     <>
@@ -25,23 +31,23 @@ export function App() {
       </Container>    
       <Container>
         <form className='form' action="">
-          <div className="formRow">
-            <label htmlFor="meuInput">task</label>
-            <input type="text" id="meuInput" />
-          </div>   
+            <Input type='text' id='meuInput' labelText='Task' placeholder='Digite algo'></Input> 
           <div className="formRow">
            <p>Lorem ipsum dolor sit amet.</p>
           </div>
 
           <div className="formRow">
-           <p>Ciclos</p>
-           <p>  0 0 0 0 0</p>
+            <Cycles></Cycles>
           </div>
 
-          
-           <Button></Button>
-          
+          <div className="formRow">
+           <Button icon={<PlayCircleIcon></PlayCircleIcon>} color='green'></Button>
+           
+          </div>
         </form>
+      </Container>
+      <Container>
+        <Footer></Footer>
       </Container>
       
     </>

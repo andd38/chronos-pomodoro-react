@@ -1,7 +1,30 @@
-.play{
+.button{
   background-color: var(--primary);
-  width: 150px;
+  min-width: 24rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  border: none;
+  color: var(--text-over-primary);
+  padding: 0.8rem;
+  border-radius: 0.8rem;
+  margin: 3.2rem 0;
+  cursor: pointer;
+  transition: all 0.4s ease-in-out;
+}
+.button svg{
+  width: 3.2rem;
+  height: 3.2rem;
+}
+.button:hover{
+  filter:brightness(70%);
+  
+}
+.green{
+  background-color: var(--primary);
+  color: var(--text-over-primary);
+}
+.red{
+  background-color: var(--error);
+  color: var(--text-over-error);
 }
